@@ -1,0 +1,355 @@
+body {
+  font-family: Roboto, Arial, sans-serif;
+  position: relative;
+  /* 把整體的捲軸隱藏，在左右邊區塊各別開捲軸 */
+  overflow: hidden;
+}
+/* ---------- Header Start ----------*/
+/* LOGO part */
+.header {
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  padding: 8px 16px;
+  height: 56px;
+  position: fixed;
+  background: #fff;
+  z-index: 100;
+}
+.menu-btn {
+  width: 40px;
+  height: 40px;
+  font-size: 16px;
+  padding: 2px 8px;
+  color: #030303;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+.header .logo-part {
+  height: 40px;
+  float: left;
+  position: relative;
+}
+.header .logo-part a {
+  display: inline-block;
+}
+.header .logo-part .logo {
+  width: 90px;
+  height: 20px;
+  margin: 10px;
+}
+.header .logo-part .menu-btn {
+  /* 解決莫名的高低差 */
+  vertical-align: top;
+}
+.header .logo-part span {
+  color: #555;
+  position: absolute;
+  right: -5px;
+}
+
+/* SEARCH part */
+.search-part {
+  display: inline-block;
+}
+.search-bar {
+  height: 40px;
+}
+.search-part input {
+  margin-left: 40px;
+  box-sizing: border-box;
+  border: 1px solid #d3d3d3;
+  width: 572px;
+  height: 40px;
+  padding: 2px 6px;
+  font-size: 18px;
+  outline: none;
+}
+.search-part .search-btn {
+  width: 64px;
+  height: 40px;
+  cursor: pointer;
+  /* 解決input與button間莫名的高低差 */
+  vertical-align: top;
+  box-sizing: border-box;
+  border: 1px solid #d3d3d3;
+  border-left: none;
+  background-color: #f8f8f8;
+  border-radius: 0 2px 2px 0;
+}
+.search-part .mic {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  margin-left: 2px;
+  cursor: pointer;
+}
+/* LOG-IN part */
+.logIn-part {
+  height: 40px;
+  float: right;
+}
+.logIn-part .log-in-btn {
+  box-sizing: border-box;
+  width: 85px;
+  height: 40px;
+  font-size: 16px;
+  background: none;
+  border: 1px solid #065fd4;
+  border-radius: 2px;
+  color: #065fd4;
+  cursor: pointer;
+}
+/* ---------- Header End ---------- */
+
+/* ---------- Sidebar Start---------- */
+.sidebar {
+  float: left;
+  width: 240px;
+  /* 設高度，scroll才有效 */
+  height: 100vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  position: absolute;
+  top: 57px;
+}
+/* .sidebar::-webkit-scrollbar {
+  width: 0 !important;
+} */
+.sidebar .section {
+  font-size: 14px;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.sidebar .section li {
+  height: 40px;
+  line-height: 40px;
+  padding: 0 24px;
+}
+
+.sidebar .section li:hover {
+  background: #eee;
+}
+
+.section li a {
+  height: 40px;
+  display: block;
+  color: #030303;
+  text-decoration: none;
+}
+.section li i {
+  margin-right: 25px;
+}
+
+.section h3 {
+  padding: 8px 24px;
+}
+
+.log-in-section {
+  font-size: 14px;
+  box-sizing: border-box;
+  width: 240px;
+  padding: 16px 32px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.log-in-section p {
+  line-height: 18px;
+  margin-bottom: 10px;
+}
+
+.log-in-section button {
+  box-sizing: border-box;
+  width: 93px;
+  height: 36px;
+  padding: 5px 10px;
+  font-size: 16px;
+  background: none;
+  border: 1px solid #065fd4;
+  border-radius: 2px;
+  color: #065fd4;
+  cursor: pointer;
+}
+
+.sidebar .footer p {
+  padding: 12px 24px 0;
+}
+.sidebar .footer a {
+  display: inline-block;
+  font-size: 12px;
+  text-decoration: none;
+  color: #030303;
+}
+.sidebar .footer .copy {
+  padding: 16px 24px;
+  font-size: 12px;
+  color: #909090;
+}
+/* ---------- Sidebar End ---------- */
+
+/* ---------- Main Side Start ----------- */
+.main-side {
+  float: left;
+  width: calc(100% - 240px);
+  height: 100vh;
+  overflow: scroll;
+  position: absolute;
+  top: 57px;
+  right: 0;
+}
+/* CATEGORY */
+.main-side .category {
+  /* 因為設定fixed導致寬度抓不到父層，置中跑掉，故在這層再設一次寬度(扣掉sidebar寬度) */
+  width: calc(100% - 240px);
+  height: 56px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  background: #fff;
+  position: fixed;
+  text-align: center;
+  top: 57px;
+  z-index: 100;
+}
+.category-list {
+  margin: 0 auto;
+}
+.category-list .category-item {
+  display: inline-block;
+  background: rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  padding: 0 12px;
+  margin: 12px 6px;
+  cursor: pointer;
+}
+.category-item:first-child {
+  background: #030303;
+}
+.category-list .category-item:first-child a {
+  color: #fff;
+}
+.category-list .category-item a {
+  font-size: 14px;
+  height: 30px;
+  line-height: 30px;
+  display: block;
+  text-decoration: none;
+  color: #030303;
+}
+
+/* BANNER */
+.main-side .banner {
+  height: 226px;
+  width: 100%;
+  padding-top: 34px;
+  background-color: #000;
+  position: absolute;
+  top: 58px;
+  z-index: 88;
+}
+.banner img {
+  height: 24px;
+  margin: 0 0 8px 24px;
+}
+.banner h1 {
+  font-size: 26px;
+  vertical-align: top;
+  color: #fff;
+  margin: 0 0 90px 24px;
+}
+.banner .subscribeBTN {
+  background: transparent;
+  font-size: 14px;
+  padding: 10px 16px;
+  margin: 0 0 34px 24px;
+  border-radius: 1px;
+  border: 1px solid #fff;
+  color: #fff;
+  cursor: pointer;
+}
+.banner span {
+  display: inline-block;
+  text-align: center;
+  line-height: 24px;
+  width: 24px;
+  height: 24px;
+  color: #030303;
+  background: #bbb;
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  cursor: pointer;
+}
+
+/* Content All */
+
+.content-all {
+  padding: 30px 0;
+  background: rgba(0, 0, 0, 0.05);
+  position: absolute;
+  top: 318px;
+}
+
+.container {
+  margin: 14px;
+  font-size: 0;
+  border-bottom: 3px solid #ccc;
+}
+.container h2 {
+  font-size: 20px;
+  color: #030303;
+  margin: 24px 20px 10px;
+}
+.card {
+  box-sizing: border-box;
+  width: 25%;
+  height: 270px;
+  padding: 10px;
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.card .content {
+  width: 83%;
+  display: inline-block;
+}
+
+img.videoPic {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+img.avatar {
+  width: 15%;
+  height: 15%;
+  border-radius: 50%;
+  margin-right: 2%;
+  vertical-align: top;
+}
+
+span.time {
+  position: absolute;
+  right: 13px;
+  top: 133px;
+  font-size: 12px;
+  color: #eee;
+  padding: 2px 4px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.card h3 {
+  font-size: 14px;
+  color: #030303;
+  line-height: 20px;
+  margin: 0 0 5px 0;
+}
+
+.card p {
+  font-size: 14px;
+  margin: 0 0 1px 0;
+  color: #606060;
+}
