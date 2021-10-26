@@ -293,7 +293,6 @@ body {
 }
 
 .container {
-  padding: 20px 0;
   margin: 14px;
   font-size: 0;
   border-bottom: 3px solid #ccc;
@@ -306,7 +305,7 @@ body {
 .card {
   box-sizing: border-box;
   width: 25%;
-  height: 270px;
+  height: 340px;
   padding: 10px;
   margin-bottom: 25px;
   position: relative;
@@ -319,7 +318,7 @@ body {
   display: inline-block;
 }
 
-div.videoPics{
+div.videoPics {
   position: relative;
 }
 img.videoPic {
@@ -347,14 +346,21 @@ span.time {
 }
 
 .card h3 {
-  font-size: 14px;
+  font-size: 16px;
   color: #030303;
   line-height: 20px;
   margin: 0 0 5px 0;
+  font-weight: bold;
 }
 
 .card p {
   font-size: 14px;
   margin: 0 0 1px 0;
   color: #606060;
+}
+
+@media (max-width: 1800px) {
+  .card {
+    height: 300px;
+  }
 }
